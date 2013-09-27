@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Hora:</b>
+  <%= @localidade.hora %>
+</p>
+
+<p>
+  <b>Data:</b>
+  <%= @localidade.data %>
+</p>
+
+<p>
+  <b>Nome:</b>
+  <%= @localidade.nome %>
+</p>
+
+
+<%= link_to 'Editar', edit_localidade_path(@localidade) %> |
+<%= link_to 'Voltar', localidades_path %>

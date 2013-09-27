@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>NomeLocalidade:</b>
+  <%= @localidadelinha.nomelocalidade %>
+</p>
+
+<p>
+  <b>NomeLinha:</b>
+  <%= @localidadelinha.nomelinha %>
+</p>
+
+<p>
+  <b>Linha:</b>
+  <%= @localidadelinha.linha.nome %>
+</p>
+
+<p>
+  <b>Localidade:</b>
+  <%= @localidadelinha.localidade.nome %>
+</p>
+
+
+<%= link_to 'Edit', edit_localidadelinha_path(@localidadelinha) %> |
+<%= link_to 'Back', localidadelinhas_path %>

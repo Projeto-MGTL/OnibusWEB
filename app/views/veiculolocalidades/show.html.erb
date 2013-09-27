@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Placa:</b>
+  <%= @veiculolocalidade.placa %>
+</p>
+
+<p>
+  <b>Data:</b>
+  <%= @veiculolocalidade.data %>
+</p>
+
+<p>
+  <b>Hora:</b>
+  <%= @veiculolocalidade.hora %>
+</p>
+
+<p>
+  <b>Nomelinha:</b>
+  <%= @veiculolocalidade.nomelinha %>
+</p>
+
+<p>
+  <b>Nomelocalidade:</b>
+  <%= @veiculolocalidade.nomelocalidade %>
+</p>
+
+<p>
+  <b>Localidadelinha:</b>
+  <%= @veiculolocalidade.localidadelinha.nomelocalidade %>
+</p>
+
+<p>
+  <b>Veiculolinha:</b>
+  <%= @veiculolocalidade.veiculolinha.nomelinha %>
+</p>
+
+
+<%= link_to 'Editar', edit_veiculolocalidade_path(@veiculolocalidade) %> |
+<%= link_to 'Voltar', veiculolocalidades_path %>

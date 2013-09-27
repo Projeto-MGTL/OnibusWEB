@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nomecidade:</b>
+  <%= @cidadeempresa.nomecidade %>
+</p>
+
+<p>
+  <b>Nomeempresa:</b>
+  <%= @cidadeempresa.nomeempresa %>
+</p>
+
+<p>
+  <b>Empresa:</b>
+  <%= @cidadeempresa.empresa.nome %>
+</p>
+
+<p>
+  <b>Cidade:</b>
+  <%= @cidadeempresa.cidade.nome %>
+</p>
+
+
+<%= link_to 'Editar', edit_cidadeempresa_path(@cidadeempresa) %> |
+<%= link_to 'Voltar', cidadeempresas_path %>

@@ -1,0 +1,27 @@
+<h1>Lista de Linhas</h1>
+
+<table>
+  <tr>
+    <th>Numero</th>
+    <th>Nome</th>
+    <th>Horario</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @linhas.each do |linha| %>
+  <tr>
+    <td><%= linha.numero %></td>
+    <td><%= linha.nome %></td>
+    <td><%= linha.horario %></td>
+    <td><%= link_to 'Visualizar', linha %></td>
+    <td><%= link_to 'Editar', edit_linha_path(linha) %></td>
+    <td><%= link_to 'Excluir', linha, method: :delete, data: { confirm: 'Você tem certeza que deseja excuir a linha ?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Cadastrar nova Linha', new_linha_path %>

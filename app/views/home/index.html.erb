@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang=”pt-br”>
+<head>
+<meta charset=”UTF-8 />
+
+<%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :application %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<h1>Bem vindo ao EASY BUS!</h1>
+
+ 
+
+<!-- end header -->
+
+
+<div id="wrapper">
+<!-- start page -->
+<div id="page">
+	<!-- start content -->
+	<div id="content">
+		<div class="post">
+			<h1 class="title"><a href="#">Mural</a></h1>
+
+			<div class="entry">
+				<p>Com o EASY BUS sua você não perde mais tempo esperando no ponto! Aqui você sabe onde seu ônibus esteve nas últimas horas e onde ele está agora, com o EASY BUS você não perdem mais o ônibus.</p>
+				
+			</div>
+		</div>
+		
+		
+	</div>
+	<!-- end content -->
+	<!-- start sidebars -->
+	<div id="sidebar1" class="sidebar">
+		<ul>
+			<li>
+				<h2>* * Aqui você pode<br>cadastrar seu Usuário</h2>
+				<ul>
+					<li>Nosso Sistema Easy Bus tem um espaço para você usuário!</li>
+					<li>Entre em nossa página de cadastro e confira!</li>
+					<li><%= link_to 'Não é usuário ainda? Cadastre-se aqui! ', new_usuario_path %></li>
+				</ul>
+			</li>
+			<li>
+				<h2>* * Após seu cadastro <br>você usuário ou empresa:</h2>
+				<ul>
+					<li>* Terá acesso a todos os serviços de nosso Sistema Easy Bus.</li>
+					<li>Cadastre-se e confira!</li>
+					
+				</ul>
+			</li>
+			<li>
+				<h2>Veiculo localidade</h2>
+				<ul>
+					<li><%= link_to 'Seu ônibus está aqui!',veiculolocalidades_path %></li>
+				</ul>
+				
+			</li>
+			
+		</ul>
+	</div>
+	<div id="sidebar2" class="sidebar">
+		<ul>
+			<li>
+				<h2>* * Aqui você pode<br>cadastrar sua Empresa</h2>
+				<ul>
+					<li>Nosso Sistema Easy Bus tem um espaço para sua empresa!</li>
+					<li>Entre em nossa página de cadastro e confira!</li>
+					<li><%= link_to 'Cadastre sua Empresa aqui!', new_empresa_path %></li>
+				</ul>
+			<li>
+				<h2>Calendário</h2>
+				<div id="calendar_wrap">
+					<table width="80%" summary="Calendar">
+						<caption>
+						Setembro 2013
+						</caption>
+						<thead>
+							<tr>
+								<th abbr="Monday" scope="col" title="Monday">M</th>
+								<th abbr="Tuesday" scope="col" title="Tuesday">T</th>
+								<th abbr="Wednesday" scope="col" title="Wednesday">W</th>
+								<th abbr="Thursday" scope="col" title="Thursday">T</th>
+								<th abbr="Friday" scope="col" title="Friday">F</th>
+								<th abbr="Saturday" scope="col" title="Saturday">S</th>
+								<th abbr="Sunday" scope="col" title="Sunday">S</th>
+							</tr>
+						</thead>
+						<tfoot>
+							<tr>
+
+								<td class="pad">&nbsp;</td>
+								<td colspan="3" id="next">&nbsp;</td>
+							</tr>
+						</tfoot>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>2</td>
+								<td>3</td>
+								<td id="today">4</td>
+								<td>5</td>
+								<td>6</td>
+								<td>7</td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td>9</td>
+								<td>10</td>
+								<td>11</td>
+								<td>12</td>
+								<td>13</td>
+								<td>14</td>
+							</tr>
+							<tr>
+								<td>15</td>
+								<td>16</td>
+								<td>17</td>
+								<td>18</td>
+								<td>19</td>
+								<td>20</td>
+								<td>21</td>
+							</tr>
+							<tr>
+								<td>22</td>
+								<td>23</td>
+								<td>24</td>
+								<td>25</td>
+								<td>26</td>
+								<td>27</td>
+								<td>28</td>
+							</tr>
+							<tr>
+								<td>29</td>
+								<td>30</td>
+								
+								<td class="pad" colspan="4">&nbsp;</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</li>
+			
+				
+			
+		</ul>
+	</div>
+	<!-- end sidebars -->
+	<div style="clear: both;">&nbsp;</div>
+</div>
+<!-- end page -->
+
+</body>
+</html>
+
+

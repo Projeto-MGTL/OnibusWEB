@@ -1,0 +1,35 @@
+<h1>Lista de Veículos e Localidades</h1>
+
+<table>
+  <tr>
+    <th>Placa</th>
+    <th>Data</th>
+    <th>Hora</th>
+    <th>Nomelinha</th>
+    <th>Nomelocalidade</th>
+    <th>Localidadelinha</th>
+    <th>Veiculolinha</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @veiculolocalidades.each do |veiculolocalidade| %>
+  <tr>
+    <td><%= veiculolocalidade.placa %></td>
+    <td><%= veiculolocalidade.data %></td>
+    <td><%= veiculolocalidade.hora %></td>
+    <td><%= veiculolocalidade.nomelinha %></td>
+    <td><%= veiculolocalidade.nomelocalidade %></td>
+    <td><%= veiculolocalidade.localidadelinha.nomelocalidade %></td>
+    <td><%= veiculolocalidade.veiculolinha.nomelinha %></td>
+    <td><%= link_to 'Visualizar', veiculolocalidade %></td>
+    <td><%= link_to 'Editar', edit_veiculolocalidade_path(veiculolocalidade) %></td>
+    <td><%= link_to 'Excluir', veiculolocalidade, method: :delete, data: { confirm: 'Tem certeza que deseja excluir o Veículo e Localidade?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Novo Veiculo e Localidade', new_veiculolocalidade_path %>

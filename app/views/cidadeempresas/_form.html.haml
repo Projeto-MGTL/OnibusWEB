@@ -1,0 +1,9 @@
+= semantic_form_for [@cidadeempresa] do |form|
+ 
+  
+  = form.input :cidade, :member_label => :nome, :label => 'Cidade' 
+  = form.input :empresa, :member_label => :nome, :label => 'Empresa'
+  = form.input :nomecidade, :label => 'Nomecidade'
+  = form.input :nomeempresa, :label => 'Nomeempresa'
+ 
+  = form.submit 'Salvar'

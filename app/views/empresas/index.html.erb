@@ -1,0 +1,33 @@
+<h1>Listing empresas</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Cnpj</th>
+    <th>Endereco</th>
+    <th>Telefone</th>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @empresas.each do |empresa| %>
+  <tr>
+    <td><%= empresa.nome %></td>
+    <td><%= empresa.cnpj %></td>
+    <td><%= empresa.endereco %></td>
+    <td><%= empresa.telefone %></td>
+    <td><%= empresa.email %></td>
+    <td><%= link_to 'Show', empresa %></td>
+    <td><%= link_to 'Edit', edit_empresa_path(empresa) %></td>
+    <td><%= link_to 'Excluir', empresa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<h2><%= link_to 'Listing of Linhas',linhas_path %></h2><br />
+
+<h2><%= link_to 'Cadastre seus veículos', new_veiculo_path %></h2>
+

@@ -1,0 +1,29 @@
+<h1>Lista de Cidades e Empresas</h1>
+
+<table>
+  <tr>
+    <th>Nomecidade</th>
+    <th>Nomeempresa</th>
+    <th>Empresa</th>
+    <th>Cidade</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cidadeempresas.each do |cidadeempresa| %>
+  <tr>
+    <td><%= cidadeempresa.nomecidade %></td>
+    <td><%= cidadeempresa.nomeempresa %></td>
+    <td><%= cidadeempresa.empresa.nome %></td>
+    <td><%= cidadeempresa.cidade.nome %></td>
+    <td><%= link_to 'Visualizar', cidadeempresa %></td>
+    <td><%= link_to 'Editar', edit_cidadeempresa_path(cidadeempresa) %></td>
+    <td><%= link_to 'Excluir', cidadeempresa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nova Cidade e empresa', new_cidadeempresa_path %>

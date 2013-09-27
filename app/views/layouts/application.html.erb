@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Golden Gate  
+Description: A three-column, fixed-width blog design.
+Version    : 1.0
+Released   : 20080905
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>SISTEMA EASY BUS</title>
+ <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :application %>
+  <%= csrf_meta_tag %>
+
+<meta name="keywords" content="" />
+<meta name="SISTEMA EASY BUS  " content="" />
+<link href="default.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+
+
+	<h4><p <p class="navbar-text pull-right">
+						<% if user_signed_in? %>
+						  			 <strong><%= current_user.email %></strong>
+						  <%= link_to 'Editar seu perfil', edit_user_registration_path, :class => 'navbar-link' %> |
+						  <%= link_to "Sair", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+						<% else %>
+						  <%= link_to "Deseja alterar sua senha?", new_user_registration_path, :class => 'navbar-link'  %> |
+						  <%= link_to "Entrar", new_user_session_path, :class => 'navbar-link'  %>
+						<% end %>
+					      </p></h4>
+				      
+					      
+<div id='header-wrapper'>
+		<div id='header'>
+			
+			<div id='logo'>
+				<h1><a href='/'>Sistema EasyBus</a></h1>
+                                <h3><p>Encontre seu Ônibus Fácil</p></h3>
+                              
+			</div>
+			   <div id = 'menu'>
+			      <ul> 
+				<li><a href="/home/index">Página Inicial</a></li>
+			       <li><%= link_to 'Cidades',cidades_path %></li>
+			       <li><%= link_to 'Empresas',empresas_path %></li>
+			       <li><%= link_to 'Linhas',linhas_path %></li>
+			       <li><%= link_to 'Usuário',usuarios_path %></li>
+			       <li><%= link_to 'Comentarios',comentarios_path %></li>
+			       
+			       	
+			      </ul> 
+			   </div>
+                </div>
+           </div>
+<div id="banner">&nbsp;</div>
+<!-- start header -->
+<div id="logo">
+	<h1><a href="#">Sistema Easy Bus  </a></h1>
+	
+	<p>Designed By MGTL 2013</p>
+</div>
+     <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+
+<%= yield %>
+
+
+
+
+
+
+</body>
+<div id="footer">
+	<p>&copy;2013 All Rights Reserved. &nbsp;&nbsp; Design by <a href="http://www.MGTL.com.br/" rel="nofollow">MGTL Soluções para sua Web</a>.</p>
+</div>
+</html>

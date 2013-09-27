@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Veiculo:</b>
+  <%= @veiculolinha.veiculo.placa %>
+</p>
+
+<p>
+  <b>Linha:</b>
+  <%= @veiculolinha.linha.nome %>
+</p>
+
+<p>
+  <b>NomeLinha:</b>
+  <%= @veiculolinha.nomelinha %>
+</p>
+
+<p>
+  <b>Placa:</b>
+  <%= @veiculolinha.placa %>
+</p>
+
+
+<%= link_to 'Editar', edit_veiculolinha_path(@veiculolinha) %> |
+<%= link_to 'Voltar', veiculolinhas_path %>

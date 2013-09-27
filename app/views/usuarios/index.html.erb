@@ -1,0 +1,30 @@
+
+<h1>Lista de Usuários</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Login</th>
+    <th>Senha</th>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @usuarios.each do |usuario| %>
+  <tr>
+    <td><%= usuario.nome %></td>
+    <td><%= usuario.login %></td>
+    <td><%= usuario.senha %></td>
+    <td><%= usuario.email %></td>
+    <td><%= link_to 'Visualizar', usuario %></td>
+    <td><%= link_to 'Editar', edit_usuario_path(usuario) %></td>
+    <td><%= link_to 'Excluir', usuario, method: :delete, data: { confirm: 'Tem certeza que deseja excluir o usuário?' } %></td>
+  </tr>
+<% end %>
+</table>
+<br />
+<h2><%= link_to 'Novo Comentário', new_comentario_path %> 	<br /> <%= link_to 'Comentário de outros Usuários',comentarios_path %></h2>
+
+

@@ -1,0 +1,2 @@
+module LocalidadelinhasHelper
+end

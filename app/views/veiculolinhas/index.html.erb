@@ -1,0 +1,29 @@
+<h1>Lista de Veículos e Linhas </h1>
+
+<table>
+  <tr>
+    <th>Veiculo</th>
+    <th>Linha</th>
+    <th>Nomelinha</th>
+    <th>Placa</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @veiculolinhas.each do |veiculolinha| %>
+  <tr>
+    <td><%= veiculolinha.veiculo.placa %></td>
+    <td><%= veiculolinha.linha.nome %></td>
+    <td><%= veiculolinha.nomelinha %></td>
+    <td><%= veiculolinha.placa %></td>
+    <td><%= link_to 'Visualizar', veiculolinha %></td>
+    <td><%= link_to 'Editar', edit_veiculolinha_path(veiculolinha) %></td>
+    <td><%= link_to 'Excluir', veiculolinha, method: :delete, data: { confirm: 'Tem certeza que deseja excluir o veículo e a linha ?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Adicionar Novo Veiculo e Linha', new_veiculolinha_path %>

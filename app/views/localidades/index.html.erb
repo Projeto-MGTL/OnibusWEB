@@ -1,0 +1,27 @@
+<h1>Lista de Localidades</h1>
+
+<table>
+  <tr>
+    <th>Hora</th>
+    <th>Data</th>
+    <th>Nome</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @localidades.each do |localidade| %>
+  <tr>
+    <td><%= localidade.hora %></td>
+    <td><%= localidade.data %></td>
+    <td><%= localidade.nome %></td>
+    <td><%= link_to 'Mostrar', localidade %></td>
+    <td><%= link_to 'Editar', edit_localidade_path(localidade) %></td>
+    <td><%= link_to 'Excluir', localidade, method: :delete, data: { confirm: 'Deseja realmente excluir?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nova Localidade', new_localidade_path %>

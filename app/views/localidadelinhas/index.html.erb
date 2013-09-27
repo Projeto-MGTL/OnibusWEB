@@ -1,0 +1,29 @@
+<h1>Listing localidadelinhas</h1>
+
+<table>
+  <tr>
+    <th>Nomelocalidade</th>
+    <th>Nomelinha</th>
+    <th>Linha</th>
+    <th>Localidade</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @localidadelinhas.each do |localidadelinha| %>
+  <tr>
+    <td><%= localidadelinha.nomelocalidade %></td>
+    <td><%= localidadelinha.nomelinha %></td>
+    <td><%= localidadelinha.linha.nome %></td>
+    <td><%= localidadelinha.localidade.nome %></td>
+    <td><%= link_to 'Show', localidadelinha %></td>
+    <td><%= link_to 'Edit', edit_localidadelinha_path(localidadelinha) %></td>
+    <td><%= link_to 'Excluir', localidadelinha, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Localidadelinha', new_localidadelinha_path %>

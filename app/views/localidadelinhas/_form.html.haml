@@ -1,0 +1,9 @@
+= semantic_form_for [@localidadelinha] do |form|
+ 
+  
+  = form.input :linha, :member_label => :nome, :label => 'Linha' 
+  = form.input :localidade, :member_label => :nome, :label => 'Localidade'
+  = form.input :nomelinha, :label => 'NomeLinha'
+  = form.input :nomelocalidade, :label => 'NomeLocalidade'
+ 
+  = form.submit 'Salvar'

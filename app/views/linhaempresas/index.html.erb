@@ -1,0 +1,29 @@
+<h1>Listing linhaempresas</h1>
+
+<table>
+  <tr>
+    <th>Nomelinha</th>
+    <th>Nomeempresa</th>
+    <th>Linha</th>
+    <th>Empresa</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @linhaempresas.each do |linhaempresa| %>
+  <tr>
+    <td><%= linhaempresa.nomelinha %></td>
+    <td><%= linhaempresa.nomeempresa %></td>
+    <td><%= linhaempresa.linha.nome %></td>
+    <td><%= linhaempresa.empresa.nome %></td>
+    <td><%= link_to 'Show', linhaempresa %></td>
+    <td><%= link_to 'Edit', edit_linhaempresa_path(linhaempresa) %></td>
+    <td><%= link_to 'Excluir', linhaempresa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Linhaempresa', new_linhaempresa_path %>
