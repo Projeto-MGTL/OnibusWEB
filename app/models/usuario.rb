@@ -1,3 +1,4 @@
 class Usuario < ActiveRecord::Base
-  attr_accessible :email, :login, :nome, :senha
+  mount_uploader :picture, PictureUploader
+  attr_accessible :name, :picture, :sobrenome
 end

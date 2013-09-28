@@ -1,4 +1,7 @@
 Webacademico::Application.routes.draw do
+  resources :usuarios
+
+
   devise_for :users
 
   get "home/index"
@@ -27,9 +30,6 @@ Webacademico::Application.routes.draw do
 
 
   resources :veiculos
-
-
-  resources :usuarios
 
 
   resources :cidades

@@ -2,9 +2,8 @@
 
 FactoryGirl.define do
   factory :usuario do
-    nome "MyString"
-    login "MyString"
-    senha "MyString"
-    email "MyString"
+    name "MyString"
+    sobrenome "MyString"
+    picture "MyString"
   end
 end

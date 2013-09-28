@@ -12,6 +12,7 @@ gem 'formtastic', '~> 2.2.1'
 gem 'flexible_date', '~> 0.4.2'
 gem 'sqlite3'
 gem 'apachelogregex'
+gem 'carrierwave'
 
 gem 'jquery-rails'
 

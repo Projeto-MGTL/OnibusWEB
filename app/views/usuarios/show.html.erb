@@ -1,25 +1,20 @@
 <p id="notice"><%= notice %></p>
-
 <p>
-  <b>Nome:</b>
-  <%= @usuario.nome %>
+  <b>Foto:</b>
+  <%= image_tag(@usuario.picture_url, :width => 200) if @usuario.picture.present? %>
+</p>
+<p>
+  <b>Name:</b>
+  <%= @usuario.name %>
 </p>
 
 <p>
-  <b>Login:</b>
-  <%= @usuario.login %>
-</p>
-
-<p>
-  <b>Senha:</b>
-  <%= @usuario.senha %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @usuario.email %>
+  <b>Sobrenome:</b>
+  <%= @usuario.sobrenome %>
 </p>
 
 
-<%= link_to 'Editar', edit_usuario_path(@usuario) %> |
-<%= link_to 'Voltar', usuarios_path %>
+
+
+<%= link_to 'Edit', edit_usuario_path(@usuario) %> |
+<%= link_to 'Back', usuarios_path %>

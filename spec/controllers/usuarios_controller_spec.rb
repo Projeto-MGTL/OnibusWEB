@@ -23,7 +23,7 @@ describe UsuariosController do
   # This should return the minimal set of attributes required to create a valid
   # Usuario. As you add validations to Usuario, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) { { "nome" => "MyString" } }
+  let(:valid_attributes) { { "name" => "MyString" } }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
@@ -85,14 +85,14 @@ describe UsuariosController do
       it "assigns a newly created but unsaved usuario as @usuario" do
         # Trigger the behavior that occurs when invalid params are submitted
         Usuario.any_instance.stub(:save).and_return(false)
-        post :create, {:usuario => { "nome" => "invalid value" }}, valid_session
+        post :create, {:usuario => { "name" => "invalid value" }}, valid_session
         assigns(:usuario).should be_a_new(Usuario)
       end
 
       it "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
         Usuario.any_instance.stub(:save).and_return(false)
-        post :create, {:usuario => { "nome" => "invalid value" }}, valid_session
+        post :create, {:usuario => { "name" => "invalid value" }}, valid_session
         response.should render_template("new")
       end
     end
@@ -106,8 +106,8 @@ describe UsuariosController do
         # specifies that the Usuario created on the previous line
         # receives the :update_attributes message with whatever params are
         # submitted in the request.
-        Usuario.any_instance.should_receive(:update_attributes).with({ "nome" => "MyString" })
-        put :update, {:id => usuario.to_param, :usuario => { "nome" => "MyString" }}, valid_session
+        Usuario.any_instance.should_receive(:update_attributes).with({ "name" => "MyString" })
+        put :update, {:id => usuario.to_param, :usuario => { "name" => "MyString" }}, valid_session
       end
 
       it "assigns the requested usuario as @usuario" do
@@ -128,7 +128,7 @@ describe UsuariosController do
         usuario = Usuario.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Usuario.any_instance.stub(:save).and_return(false)
-        put :update, {:id => usuario.to_param, :usuario => { "nome" => "invalid value" }}, valid_session
+        put :update, {:id => usuario.to_param, :usuario => { "name" => "invalid value" }}, valid_session
         assigns(:usuario).should eq(usuario)
       end
 
@@ -136,7 +136,7 @@ describe UsuariosController do
         usuario = Usuario.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Usuario.any_instance.stub(:save).and_return(false)
-        put :update, {:id => usuario.to_param, :usuario => { "nome" => "invalid value" }}, valid_session
+        put :update, {:id => usuario.to_param, :usuario => { "name" => "invalid value" }}, valid_session
         response.should render_template("edit")
       end
     end
