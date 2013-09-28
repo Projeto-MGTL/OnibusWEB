@@ -18,7 +18,7 @@ class Ability
          
        end
        if user.role == "empresa" || user.role == "empresa"
-         can :read, [Cidade]
+         can :read, :all
          can :crud, [Empresa]
          can :crud, [Linha]
          can :crud, [Veiculo]
