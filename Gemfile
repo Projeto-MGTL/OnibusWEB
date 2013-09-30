@@ -13,6 +13,7 @@ gem 'flexible_date', '~> 0.4.2'
 gem 'sqlite3'
 gem 'apachelogregex'
 gem 'carrierwave'
+gem 'rails-i18n', '~> 3.0.0.pre' # For 3.x
 
 gem 'jquery-rails'
 

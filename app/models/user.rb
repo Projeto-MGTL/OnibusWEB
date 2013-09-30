@@ -8,8 +8,9 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :role
   # attr_accessible :title, :body
   validates_presence_of :email
-    
-    ROLES = %w[administrador empresa usuario]
+    PTROLES = %w[administrador empresa usuario]
+    USROLES = %w[administrador empresa usuario]
+
     
     def role_symbols
         [role.to_sym]

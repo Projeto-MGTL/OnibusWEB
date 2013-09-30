@@ -1,0 +1,16 @@
+<%= form_for(@linha) do |f| %>
+
+   <h2><%= I18n.t "activerecord.models.linha" %></h2>
+
+   <p><%= f.label :numero %><br />
+   <%= f.text_field :numero %></p>
+   
+   <p><%= f.label :nome %><br />
+   <%= f.text_field :nome %></p>
+   
+   <p><%= f.label :horario %><br />
+   <%= f.text_field :horario %></p>
+   
+       
+  <%= f.submit %>
+<% end %>

@@ -1,12 +1,22 @@
 Webacademico::Application.routes.draw do
-  resources :usuarios
+
 
 
   devise_for :users
 
+  get "cidades/index"
+
+  get "usuario/index"
+
+  get "empresa/index"
+  get "comentarios/index"
+  get "linhas/index"
+  
+
   get "home/index"
   root :to => "home#index"
 
+  resources :usuarios
 
   resources :veiculolocalidades
 

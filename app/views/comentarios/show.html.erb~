@@ -1,0 +1,24 @@
+<%= form_for(@comentario) do |f| %>
+
+    <h2><%= I18n.t "activerecord.models.comentario" %></h2>
+
+    <p><b><%= f.label :data %>:</b>
+    <%= @comentario.data %></p>
+
+    <p><b><%= f.label :hora %>:</b>
+    <%= @comentario.hora %></p>
+
+    <p><b><%= f.label :comentario %>:</b>
+    <%= @comentario.comentario %></p>
+
+    <p><b><%= f.label :usuario_id %>:</b>
+    <%= @comentario.usuario.id.to_s %></p>
+
+    <p><b><%= f.label :linha_id %>:</b>
+    <%= @comentario.linha.nome.to_s %></p>
+<% end %>
+
+<p><% if can? :update, @comentario %>
+    <%= link_to I18n.t('link_to.edit'), edit_comentario_path(@comentario) %> |
+<% end %>
+<%= link_to I18n.t('link_to.back'), comentarios_path %></p>

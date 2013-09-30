@@ -1,0 +1,24 @@
+<%= form_for(@comentario) do |f| %>
+
+    <h2><%= I18n.t "activerecord.models.comentario" %></h2>
+
+<p><%= f.label :data %><br />
+<%= f.text_field :data %></p>
+
+<p><%= f.label :hora %><br />
+<%= f.text_field :hora %></p>
+
+<p><%= f.label :comentario %><br />
+<%= f.text_field :comentario %></p>
+
+<p><%= f.label :usuario_nome %><br />
+<%= f.collection_select :usuario_nome, Usuario.all, :nome, :nome.to_s %> </p>
+
+<p><%= f.label :linha_nome %><br />
+<%= f.collection_select :linha_nome, Linha.all, :id, :nome.nome_s %> </p>
+
+<div><%= f.submit %></div>
+
+<% end %>
+
+

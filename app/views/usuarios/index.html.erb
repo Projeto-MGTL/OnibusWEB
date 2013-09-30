@@ -1,27 +1,33 @@
-<h1>Listing usuarios</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Sobrenome</th>
-    <th>Picture</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<h2><%= I18n.t "activerecord.models.usuario" %></h2>
 
 <% @usuarios.each do |usuario| %>
-  <tr>
-    <td><%= usuario.name %></td>
-    <td><%= usuario.sobrenome %></td>
-    <td><%= usuario.picture %></td>
-    <td><%= link_to 'Show', usuario %></td>
-    <td><%= link_to 'Edit', edit_usuario_path(usuario) %></td>
-    <td><%= link_to 'Destroy', usuario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+
+    <table>
+      <tr>
+        <th><%='picture' %></th>
+        <th><%='name' %></th>
+        <th><%='sobrenome' %></th>
+      </tr>
+      <tr>
+        <td><%= usuario.picture %></td>
+        <td><%= usuario.name %></td>
+        <td><%= usuario.sobrenome %></td>
+      </tr>
+      <tr>
+        <% if can? :read, @usuario %>
+            <td><p><%= link_to I18n.t('link_to.show'), usuario %></p></td>
+        <% end %>
+        <% if can? :update, @usuario %>
+            <td><p><%= link_to I18n.t('link_to.edit'), edit_usuario_path(usuario) %></p></td>
+        <% end %>
+        <% if can? :delete, @usuario %>
+            <td><p><%= link_to I18n.t('link_to.delete'), usuario, method: :delete, data: { confirm: 'Are you sure?' } %></p></td>
+        <% end %>
+      </tr>
+    </table>
 <% end %>
-</table>
 
 <br />
-
-<%= link_to 'New Usuario', new_usuario_path %>
+<% if can? :create, @usuario %>
+    <p><%= link_to I18n.t('link_to.new'), new_usuario_path %></p>
+<% end %>

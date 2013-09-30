@@ -1,20 +1,20 @@
-<p id="notice"><%= notice %></p>
+<%= form_for(@linha) do |f| %>
 
-<p>
-  <b>Numero:</b>
-  <%= @linha.numero %>
-</p>
+   <h2><%= I18n.t "activerecord.models.linha" %></h2>
+    
+    <p><b><%= f.label :numero %>:</b>
+    <%= @linha.numero %></p>
 
-<p>
-  <b>Nome:</b>
-  <%= @linha.nome %>
-</p>
+    <p><b><%= f.label :nome %>:</b>
+    <%= @linha.nome %></p>
 
-<p>
-  <b>Horario:</b>
-  <%= @linha.horario %>
-</p>
+    <p><b><%= f.label :horario %>:</b>
+    <%= @linha.horario %></p>
 
 
-<%= link_to 'Editar', edit_linha_path(@linha) %> |
-<%= link_to 'Voltar', linhas_path %>
+<% end %>
+
+<p><% if can? :update, @linha %>
+    <%= link_to I18n.t('link_to.edit'), edit_linha_path(@linha) %> |
+<% end %>
+<%= link_to I18n.t('link_to.back'), linhas_path %></p>

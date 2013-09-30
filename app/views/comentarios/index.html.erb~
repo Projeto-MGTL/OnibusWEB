@@ -1,3 +1,6 @@
+
+<h2><%= I18n.t "activerecord.models.comentario" %></h2>
+
 <h1>* * * Bem Vindo! * * *</h1>
 <h1>Nesta página do Sistema Easy Bus você poderá:</h1>
 <h1>* Adicionar um novo comentário. </h1>
@@ -15,20 +18,39 @@
     <th></th>
   </tr>
 
+
 <% @comentarios.each do |comentario| %>
-  <tr>
-    <td><%= comentario.data %></td>
-    <td><%= comentario.hora %></td>
-    <td><%= comentario.comentario %></td>
-    <td><%= comentario.usuario %></td>
-    <td><%= comentario.linha %></td>
-    <td><%= link_to 'Show', comentario %></td>
-    <td><%= link_to 'Edit', edit_comentario_path(comentario) %></td>
-    <td><%= link_to 'Excluir', comentario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+
+    <table>
+      <tr>
+        <th><%= I18n.t 'activerecord.attributes.comentario.data' %></th>
+        <th><%= I18n.t 'activerecord.attributes.comentario.hora' %></th>
+        <th><%= I18n.t 'activerecord.attributes.comentario.comentario' %></th>
+        <th><%= I18n.t 'activerecord.attributes.comentario.usuario_name' %></th>
+        <th><%= I18n.t 'activerecord.attributes.comentario.linha_nome' %></th>
+      </tr>
+      <tr>
+        <td><%= comentario.data %></td>
+        <td><%= comentario.hora %></td>
+        <td><%= comentario.comentario %></td>
+        <td><%= comentario.usuario %></td>
+        <td><%= comentario.linha %></td>
+      </tr>
+      <tr>
+        <% if can? :read, @comentario %>
+            <td><p><%= link_to I18n.t('link_to.show'), comentario %></p></td>
+        <% end %>
+        <% if can? :update, @comentario %>
+            <td><p><%= link_to I18n.t('link_to.edit'), edit_comentario_path(comentario) %></p></td>
+        <% end %>
+        <% if can? :delete, @comentario %>
+            <td><p><%= link_to I18n.t('link_to.delete'), comentario, method: :delete, data: { confirm: 'Are you sure?' } %></p></td>
+        <% end %>
+      </tr>
+    </table>
 <% end %>
-</table>
 
 <br />
-
-<%= link_to 'New Comentario', new_comentario_path %>
+<% if can? :create, @comentario %>
+    <p><%= link_to I18n.t('link_to.new'), new_comentario_path %></p>
+<% end %>

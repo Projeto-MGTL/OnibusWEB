@@ -1,5 +1,11 @@
 <h1>New usuario</h1>
 
 <%= render 'form' %>
+<p>
+   <% = F.label: linguagem, "Language"%> <br />
+   <% = F.select: linguagem, [['Inglês', 'en'], ['Wookieespeak', 'semana']]%>
+ </ P> 
 
 <%= link_to 'Back', usuarios_path %>
+
+

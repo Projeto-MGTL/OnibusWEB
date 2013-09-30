@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <b>Foto:</b>
+  <%= image_tag(@usuario.picture_url, :width => 200) if @usuario.picture.present? %>
+</p>
+<p>
+  <b>Name:</b>
+  <%= @usuario.name %>
+</p>
+
+<p>
+  <b>Sobrenome:</b>
+  <%= @usuario.sobrenome %>
+</p>
+
+
+
+<p><% if can? :update, @usuario %>
+    <%= link_to I18n.t('link_to.edit'), edit_usuario_path(@aluno) %> |
+<% end %>
+<%= link_to I18n.t('link_to.back'), usuarios_path %></p>
+
+

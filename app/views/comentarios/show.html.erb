@@ -1,30 +1,24 @@
-<p id="notice"><%= notice %></p>
+<%= form_for(@comentario) do |f| %>
 
-<p>
-  <b>Data:</b>
-  <%= @comentario.data %>
-</p>
+    <h2><%= I18n.t "activerecord.models.comentario" %></h2>
 
-<p>
-  <b>Hora:</b>
-  <%= @comentario.hora %>
-</p>
+    <p><b><%= f.label :data %>:</b>
+    <%= @comentario.data %></p>
 
-<p>
-  <b>Comentario:</b>
-  <%= @comentario.comentario %>
-</p>
+    <p><b><%= f.label :hora %>:</b>
+    <%= @comentario.hora %></p>
 
-<p>
-  <b>Usuario:</b>
-  <%= @comentario.usuario.nome %>
-</p>
+    <p><b><%= f.label :comentario %>:</b>
+    <%= @comentario.comentario %></p>
 
-<p>
-  <b>Linha:</b>
-  <%= @comentario.linha.nome %>
-</p>
+    <p><b><%= f.label :usuario_id %>:</b>
+    <%= @comentario.usuario.name.to_s %></p>
 
+    <p><b><%= f.label :linha_id %>:</b>
+    <%= @comentario.linha.nome.to_s %></p>
+<% end %>
 
-<%= link_to 'Edit', edit_comentario_path(@comentario) %> |
-<%= link_to 'Back', comentarios_path %>
+<p><% if can? :update, @comentario %>
+    <%= link_to I18n.t('link_to.edit'), edit_comentario_path(@comentario) %> |
+<% end %>
+<%= link_to I18n.t('link_to.back'), comentarios_path %></p>
