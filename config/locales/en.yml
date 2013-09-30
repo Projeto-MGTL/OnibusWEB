@@ -249,7 +249,7 @@ en:
       user: "User"
     attributes:
       usuario:
-        nome: "Name"
+        name: "Name"
         sobrenome: "Surname"
         picture: "Photo"
       cidade:

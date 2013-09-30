@@ -206,7 +206,7 @@ en:
   # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
   link_to:
     linhas: "Line"
-    empresa: "Business"
+    empresas: "Business"
     usuarios: "User"
     cidades: "City"
     comentarios: "Comment"

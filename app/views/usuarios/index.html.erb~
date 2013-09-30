@@ -3,10 +3,16 @@
 <% @usuarios.each do |usuario| %>
 
     <table>
+ <tr>
+        <th><%= I18n.t 'activerecord.attributes.usuario.name' %></th>
+        <th><%= I18n.t 'activerecord.attributes.usuario.sobrenome' %></th>
+        <th><%= I18n.t 'activerecord.attributes.usuario.picture' %></th>
+
+      </tr>
       <tr>
-        <th><%='picture' %></th>
-        <th><%='name' %></th>
-        <th><%='sobrenome' %></th>
+        <th><%= I18n.t 'picture' %></th>
+        <th><%= I18n.t 'name' %></th>
+        <th><%= I18n.t 'sobrenome' %></th>
       </tr>
       <tr>
         <td><%= usuario.picture %></td>
