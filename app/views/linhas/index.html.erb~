@@ -1,8 +1,4 @@
-<h1>* * * Bem Vindo! * * *</h1>
-<h1>Nesta página do Sistema Easy Bus você poderá:</h1>
-<h1>* Cadastrar uma nova linha. </h1>
-<h1>* Acessar toda a lista de linhas de</h1>
-<h1>ônibus e seus respectivos horários.</h1>
+<h1>Lista de Linhas</h1>
 
 <table>
   <tr>
