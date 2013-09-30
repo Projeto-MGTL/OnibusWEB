@@ -6,9 +6,9 @@ Webacademico::Application.routes.draw do
 
   get "cidades/index"
 
-  get "usuario/index"
+  get "usuarios/index"
 
-  get "empresa/index"
+  get "empresas/index"
   get "comentarios/index"
   get "linhas/index"
   
