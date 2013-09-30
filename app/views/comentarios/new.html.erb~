@@ -1,0 +1,3 @@
+<%= render 'formulario' %>
+
+<p><%= link_to I18n.t('link_to.back'), comentarios_path %></p>>

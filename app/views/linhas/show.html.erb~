@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Numero:</b>
+  <%= @linha.numero %>
+</p>
+
+<p>
+  <b>Nome:</b>
+  <%= @linha.nome %>
+</p>
+
+<p>
+  <b>Horario:</b>
+  <%= @linha.horario %>
+</p>
+
+
+<%= link_to 'Editar', edit_linha_path(@linha) %> |
+<%= link_to 'Voltar', linhas_path %>
